@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+</head>
+<body>
+<div style="margin: 0 auto;width:200px; height: 40px; line-height: 40px;">登录系统</div>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form action='/test/login' method='post' name='LoginFormViews' enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {#{ form.csrf_token }#}
+        <table>
+        {{ render_field(form.username) }}
+        {{ render_field(form.password) }}
+  </table>
+   {{ form.submit }}
+    </form>
+
+
+<hr></hr>
+
+</body>
+</html>

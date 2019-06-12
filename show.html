@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Information</title>
+</head>
+<body>
+    {% for i in content %}
+        <input type="button" style="width:200px;height:50px;" value={{ i[1] }}  onclick="document.location.href("b.html?cc="+i\)" >
+
+    {% endfor %}
+
+</body>
+</html>

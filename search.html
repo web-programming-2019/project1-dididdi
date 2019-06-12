@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+</head>
+<body>
+<div style="margin: 0 auto;width:200px; height: 40px; line-height: 40px;">搜索({{session['username']}})<b style="color:red;"><a href="/test/logout">注销</a></b></div>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form action='/test/search' method='post' name='NewsFormViews' enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {#{ form.csrf_token }#}
+        <table>
+        {{ render_field(form.key) }}
+  </table>
+   {{ form.submit }}
+    </form>
+
+
+<hr></hr>
+
+</body>
+</html>
